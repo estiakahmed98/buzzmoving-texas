@@ -21,7 +21,7 @@ const RelatedPost = () => {
             href="/article-1"
             className="text-blue-500 hover:underline mt-2 block"
           >
-            Read more
+            Read more...
           </Link>
         </div>
         <div className="bg-white p-4 rounded-lg shadow-md">
@@ -41,12 +41,12 @@ const RelatedPost = () => {
             href="/article-2"
             className="text-blue-500 hover:underline mt-2 block"
           >
-            Read more
+            Read more...
           </Link>
         </div>
         <div className="bg-white p-4 rounded-lg shadow-md">
           <img
-            src="./image/moving-image-4.jpg" // Replace with actual image path
+            src="./image/moving-image-4.jpg"
             alt="Article 3"
             className="w-full h-40 object-cover rounded-md"
           />
@@ -61,7 +61,7 @@ const RelatedPost = () => {
             href="/article-3"
             className="text-blue-500 hover:underline mt-2 block"
           >
-            Read more
+            Read more...
           </Link>
         </div>
       </div>

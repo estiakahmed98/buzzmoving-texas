@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import RelatedPost from "./RelatedPost";
+import EmailSubscription from "./EmailSubmission";
 
 const PostPage: React.FC = () => {
   return (
@@ -123,21 +124,19 @@ const PostPage: React.FC = () => {
         </div>
       </div>
 
-      <h2 className="text-xl font-semibold mb-4 mt-5 pl-5">Related Articles</h2>
+      <div>
+        <h2 className="text-3xl font-bold text-center mt-7 pl-5">
+          Related <span className="text-orange-600">Articles</span>
+        </h2>
+        <div className="mb-6 mt-2">
+          <div className="w-16 h-1 bg-orange-600 mx-auto"></div>
+        </div>
+      </div>
       <RelatedPost />
 
-      <div className="bg-green-600 text-white text-center py-12 mt-16">
-        <h2 className="text-2xl font-semibold mb-4">
-          Reliable Tips for a Smooth Transition to Your New Home.
-        </h2>
-        <Link
-          href="/subscribe"
-          className="bg-white text-green-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition"
-        >
-          Subscribe Now
-        </Link>
+      <div className="mx-auto pt-6 ">
+        <EmailSubscription />
       </div>
-      <div className="h-[120px]"></div>
     </div>
   );
 };

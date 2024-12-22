@@ -1,43 +1,18 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import Image from "next/image";
-
-interface Review {
-  name: string;
-  role: string;
-  date: string;
-  rating: number;
-  text: string;
-  image: string;
-}
-
-const reviews: Review[] = [
-  {
-    name: "Estiak Ahmed",
-    role: "Taxas Company",
-    date: "14th Feb, 2024",
-    rating: 5,
-    text: "Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore. Lorem Ipsum Dolor Sit Amet.",
-    image: "/image/profile.png",
-  },
-  {
-    name: "Juwel Rana",
-    role: "Carlifonia",
-    date: "14th Feb, 2024",
-    rating: 5,
-    text: "Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore. Lorem Ipsum Dolor Sit Amet.",
-    image: "/image/profile.png",
-  },
-  {
-    name: "Faysal Ahmed",
-    role: "Taxas Company",
-    date: "14th Feb, 2024",
-    rating: 4,
-    text: "Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore. Lorem Ipsum Dolor Sit Amet.",
-    image: "/image/profile.png",
-  },
-];
+import { reviews } from "@/app/data/review";
+import Link from "next/link";
 
 const CustomerReviews: React.FC = () => {
+  const initialReviews = reviews.slice(0, 3); // Display only the first 3 reviews initially
+  const [displayedReviews, setDisplayedReviews] = useState(initialReviews);
+
+  const handleViewAll = () => {
+    setDisplayedReviews(reviews); // Show all reviews on "View All" click
+  };
+
   return (
     <section className="bg-gray-50 p-6">
       <div className="container mx-auto text-center">
@@ -49,7 +24,7 @@ const CustomerReviews: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {reviews.map((review, index) => (
+          {displayedReviews.map((review, index) => (
             <div
               key={index}
               className="bg-white rounded-lg shadow-md p-6 flex flex-col items-start"
@@ -83,9 +58,12 @@ const CustomerReviews: React.FC = () => {
         </div>
 
         <div className="mt-8">
-          <button className="px-6 py-2 bg-red-600 text-white rounded-md shadow-md hover:bg-red-700 transition">
-            View All
-          </button>
+          <Link
+            href="/review"
+            className="px-4 py-2 bg-blue-600 text-white shadow-md hover:bg-blue-700 transition"
+          >
+            VIEW MORE
+          </Link>
         </div>
       </div>
     </section>

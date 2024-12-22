@@ -1,9 +1,9 @@
 import Link from "next/link";
-import { Facebook, Instagram } from "lucide-react";
+import { Facebook, Instagram, Twitter, Youtube } from "lucide-react";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-gray-50 text-gray-600 py-6 border border-gray-100 shadow-t-sm">
+    <footer className="bg-gray-50 text-gray-600 py-6 shadow-t-sm">
       <div className="container mx-auto text-center">
         {/* Navigation Links */}
         <nav className="mb-4">
@@ -29,7 +29,7 @@ const Footer: React.FC = () => {
 
         {/* Copyright Section */}
         <p className="text-sm mb-4">
-          © 2024 Moving Services. All Rights Reserved.
+          © 2024 Moving Quote Services. All Rights Reserved.
         </p>
 
         {/* Social Media Icons */}
@@ -49,6 +49,22 @@ const Footer: React.FC = () => {
             className="w-10 h-10 bg-gray-200 text-gray-600 flex items-center justify-center rounded-full hover:bg-gray-300 transition"
           >
             <Instagram className="w-6 h-6" />
+          </a>
+          <a
+            href="https://twitter.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-10 h-10 bg-gray-200 text-gray-600 flex items-center justify-center rounded-full hover:bg-gray-300 transition"
+          >
+            <Twitter className="w-6 h-6" />
+          </a>
+          <a
+            href="https://youtube.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-10 h-10 bg-gray-200 text-gray-600 flex items-center justify-center rounded-full hover:bg-gray-300 transition"
+          >
+            <Youtube className="w-6 h-6" />
           </a>
         </div>
       </div>
