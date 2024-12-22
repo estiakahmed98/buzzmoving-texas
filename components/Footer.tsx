@@ -3,7 +3,7 @@ import { Facebook, Instagram, Twitter, Youtube } from "lucide-react";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-gray-50 text-gray-600 py-6 shadow-t-sm">
+    <footer className="bg-[#191C27] text-white py-6 shadow-t-sm">
       <div className="container mx-auto text-center">
         {/* Navigation Links */}
         <nav className="mb-4">

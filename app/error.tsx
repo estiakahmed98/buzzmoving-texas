@@ -14,7 +14,7 @@ const Error: React.FC<ErrorProps> = ({
   return (
     <div className="h-full flex flex-col justify-center items-center gap-4 text-center">
       <AlertCircle className="size-12 text-red-600" />
-      <p className="text-lg font-semibold text-red-600">{message}</p>
+      <p className="text-4xl font-semibold text-red-600">{message}</p>
       {onRetry && (
         <button
           onClick={onRetry}

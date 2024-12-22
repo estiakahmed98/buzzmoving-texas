@@ -2,8 +2,7 @@ import React from "react";
 
 const HeroSection: React.FC = () => {
   return (
-    <section className="relative text-white py-16 lg:h-[500px] overflow-hidden">
-      {/* Background Video */}
+    <section className="relative text-white lg:h-[600px] overflow-hidden">
       <video
         className="absolute top-0 left-0 w-full h-full object-cover"
         src="/image/hero.mp4"
@@ -13,7 +12,7 @@ const HeroSection: React.FC = () => {
         playsInline
       ></video>
 
-      <div className="relative container mx-auto flex flex-col-reverse md:flex-row items-center pt-40 px-6 z-10">
+      <div className="absolute inset-0 flex flex-col md:flex-row left-[10%] top-[45%]">
         {/* Left Content */}
         <div className="md:w-1/2 text-center md:text-left">
           <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
@@ -22,9 +21,7 @@ const HeroSection: React.FC = () => {
           <p className="text-3xl md:text-4xl font-semibold leading-tight mb-6">
             Trusted Moving Company
           </p>
-          {/* <button className="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold py-3 px-8 rounded-lg shadow-md transition duration-300">
-            Start Test
-          </button> */}
+
           <div className="flex gap-6 items-center mt-8">
             <div>
               <h2 className="text-2xl font-bold">126+</h2>
