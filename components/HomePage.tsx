@@ -19,7 +19,7 @@ const HomePage = () => {
           </div>
         </div>
 
-        <RelatedPost />
+        <RelatedPost currentPostID="119" />
         <MovingCostCalculator />
 
         <CustomerReviews />
