@@ -1,5 +1,3 @@
-"use client";
-
 import MovingCostCalculator from "@/components/MovingCostCalculator";
 
 const ContactUs: React.FC = () => {

@@ -1,13 +1,26 @@
 "use client";
 
+import React from "react";
 import Link from "next/link";
 import { postdata } from "@/app/data/postdata";
 
+interface Post {
+  ID: string;
+  post_author: string;
+  post_date: string;
+  post_date_gmt: string;
+  post_content: string;
+  post_title: string;
+}
+
 const extractFirstImage = (htmlContent: string): string | null => {
-  const parser = new DOMParser();
-  const doc = parser.parseFromString(htmlContent, "text/html");
-  const imgElement = doc.querySelector("img");
-  return imgElement ? imgElement.getAttribute("src") : null;
+  if (typeof window !== "undefined") {
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(htmlContent, "text/html");
+    const imgElement = doc.querySelector("img");
+    return imgElement ? imgElement.getAttribute("src") : null;
+  }
+  return null;
 };
 
 const BlogPage: React.FC = () => {
@@ -15,7 +28,7 @@ const BlogPage: React.FC = () => {
     <div className="container mx-auto mt-12 px-4">
       <h1 className="text-4xl font-bold mb-8 text-center">Our Blog</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {postdata.map((post) => {
+        {postdata.map((post: Post) => {
           const imageUrl = extractFirstImage(post.post_content);
           return (
             <div key={post.ID} className="bg-white rounded-lg shadow-md p-4">

@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import React, { useState, useRef } from "react";
 import Link from "next/link";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { VscAccount } from "react-icons/vsc";
@@ -8,9 +8,9 @@ import { postdata } from "@/app/data/postdata";
 
 const HeaderMenu: React.FC = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
-
   const [hoveredMenu, setHoveredMenu] = useState<string | null>(null);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const [isHovered, setIsHovered] = useState<boolean>(false);
 
   const handleMouseEnter = (menuName: string) => {
     if (timeoutRef.current) {
@@ -22,7 +22,7 @@ const HeaderMenu: React.FC = () => {
   const handleMouseLeave = () => {
     timeoutRef.current = setTimeout(() => {
       setHoveredMenu(null);
-    }, 200);
+    }, 300);
   };
 
   return (
@@ -30,14 +30,14 @@ const HeaderMenu: React.FC = () => {
       <nav className="container mx-auto flex items-center justify-between py-4 px-6 text-white">
         {/* Logo */}
         <div className="flex items-center space-x-4">
-          <img src="/image/logo.png" alt="Company Logo" className="size-auto" />
+          <img src="/image/logo.png" alt="Company Logo" className="h-10" />
         </div>
 
         {/* Mobile Menu Button */}
         <div className="md:hidden">
           <button
             onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
-            className="text-gray-600"
+            className="text-white"
           >
             {isMobileMenuOpen ? (
               <X className="w-6 h-6" />
@@ -47,7 +47,8 @@ const HeaderMenu: React.FC = () => {
           </button>
         </div>
 
-        <ul className="hidden text-white md:flex items-center space-x-10 font-semibold text-lg">
+        {/* Desktop Menu */}
+        <ul className="hidden md:flex items-center space-x-10 font-semibold text-lg">
           <li>
             <Link href="/home">Home</Link>
           </li>
@@ -137,7 +138,7 @@ const HeaderMenu: React.FC = () => {
               <ChevronDown className="ml-2 w-4 h-4 text-white" />
             </div>
             {hoveredMenu === "about" && (
-              <ul className="absolute left-0 mt-2 w-48 bg-white text-black shadow-lg rounded-xl opacity-0 group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-in-out invisible">
+              <ul className="absolute left-0 mt-2 w-48 bg-white text-black shadow-lg rounded-xl opacity-100">
                 <li className="px-4 py-2 hover:text-blue-600">
                   <Link href="/about-us/testimonial">Testimonials</Link>
                 </li>
@@ -159,38 +160,51 @@ const HeaderMenu: React.FC = () => {
               <ChevronDown className="ml-2 w-4 h-4 text-white" />
             </div>
 
+            {/* Dropdown Menu */}
             {hoveredMenu === "blogs" && (
-              <div className="absolute left-0 mt-5 w-[500px] bg-white text-black shadow-lg rounded-xl p-6">
+              <div className="absolute -left-32 mt-5 w-[450px] bg-white text-black shadow-lg rounded-xl p-4">
                 <div className="flex">
-                  <div className="w-1/3">
+                  {/* Image and Description */}
+                  <div className={`w-1/3 ${isHovered ? "hidden" : "block"}`}>
                     <img
                       src="/image/delevery4.jpg"
                       alt="Explore Blogs"
                       className="w-full h-auto rounded-md mb-4"
                     />
                     <h4 className="text-lg font-bold">Explore Blogs</h4>
-                    <p className="text-sm text-gray-600">
+                    <p className="text-gray-600">
                       Discover insights, tips, and stories on a variety of
                       topics.
                     </p>
                   </div>
 
-                  <div className="w-3/4 pl-6 overflow-y-auto h-80 ">
-                    <div>
-                      <div className="py-2 flex justify-between">
-                        <h5 className="text-lg font-bold mb-2">Our Blogs</h5>
-                        <div className="bg-orange-500 p-2 text-white rounded-full">
-                          Count: {postdata.length}
+                  {/* Links Section */}
+                  <div
+                    className={`${
+                      isHovered ? "w-full" : "w-2/3"
+                    } gap-4 pl-6 overflow-y-auto h-96`}
+                  >
+                    <div
+                      onMouseEnter={() => setIsHovered(true)}
+                      onMouseLeave={() => setIsHovered(false)}
+                    >
+                      <div>
+                        <div className="py-2 flex justify-between">
+                          <h5 className="text-lg font-bold mb-2">Our Blogs</h5>
+                          <p className="bg-amber-500 px-3 py-1 rounded-xl font-semibold">
+                            <span className="font-semibold">Count: </span>
+                            {postdata.length}
+                          </p>
                         </div>
                         <hr />
                       </div>
 
-                      <ul className="space-y-4 border bottom-2 text-md">
+                      <ul className="space-y-3">
                         {postdata.map((id) => (
-                          <li key={id.ID}>
+                          <li key={id.ID} className="border-b py-2">
                             <Link
                               href={`/blog/${id.ID}`}
-                              className="text-gray-700 hover:text-blue-500"
+                              className="text-gray-800 hover:text-blue-500"
                             >
                               {id.post_title}
                             </Link>

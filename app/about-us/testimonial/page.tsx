@@ -1,6 +1,5 @@
 import React from "react";
 import { VideoData } from "@/app/data/videoReview";
-import EmailSubscription from "@/components/EmailSubmission";
 
 const ReviewsPage = () => {
   return (

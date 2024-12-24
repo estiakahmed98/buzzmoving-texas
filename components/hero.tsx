@@ -1,4 +1,5 @@
 import React from "react";
+import MovingCalculator from "./CostCalculator";
 
 const HeroSection: React.FC = () => {
   return (
@@ -12,9 +13,8 @@ const HeroSection: React.FC = () => {
         playsInline
       ></video>
 
-      <div className="absolute inset-0 flex flex-col md:flex-row left-[10%] top-[45%]">
-        {/* Left Content */}
-        <div className="md:w-1/2 text-center md:text-left">
+      <div className="absolute inset-0 flex flex-col md:flex-row ">
+        <div className="relative md:w-1/2 text-center md:text-left left-[10%] top-[45%]">
           <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
             Moving Quote Taxes
           </h1>
@@ -33,6 +33,9 @@ const HeroSection: React.FC = () => {
             </div>
           </div>
         </div>
+        {/* <div className="relative md:text-left left-[10%] top-[15%] ">
+          <MovingCalculator />
+        </div> */}
       </div>
     </section>
   );
