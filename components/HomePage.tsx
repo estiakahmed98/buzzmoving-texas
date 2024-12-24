@@ -10,11 +10,7 @@ const HomePage = () => {
   return (
     <>
       <div className="relative">
-        {" "}
         <HeroSection />
-        <div className="fixed bg-transparent shadow-lg  md:text-left right-[5%] top-[15%] z-30">
-          <MovingCalculator />
-        </div>
         <div>
           <h2 className="text-3xl font-bold text-center mt-7 pl-5">
             Recent <span className="text-orange-600">Articles</span>

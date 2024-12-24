@@ -1,7 +1,7 @@
 export const postdata = [
   {
     ID: "117",
-    post_category: "1",
+    post_category: "Arizona",
     post_author: "1",
     post_date: "2022-09-02 06:33:28",
     post_date_gmt: "2022-09-02 06:33:28",
@@ -28,7 +28,7 @@ export const postdata = [
   },
   {
     ID: "119",
-    post_category: "1",
+    post_category: "Arizona",
     post_author: "1",
     post_date: "2022-09-02 11:45:19",
     post_date_gmt: "2022-09-02 11:45:19",
@@ -55,7 +55,7 @@ export const postdata = [
   },
   {
     ID: "120",
-    post_category: "1",
+    post_category: "Arizona",
     post_author: "1",
     post_date: "2022-09-03 05:25:24",
     post_date_gmt: "2022-09-03 05:25:24",
@@ -108,7 +108,7 @@ export const postdata = [
   },
   {
     ID: "128",
-    post_category: "1",
+    post_category: "Arizona",
     post_author: "1",
     post_date: "2022-09-28 10:11:40",
     post_date_gmt: "2022-09-28 10:11:40",
@@ -135,7 +135,7 @@ export const postdata = [
   },
   {
     ID: "129",
-    post_category: "1",
+    post_category: "Arizona",
     post_author: "1",
     post_date: "2022-09-29 09:55:31",
     post_date_gmt: "2022-09-29 09:55:31",
@@ -162,7 +162,7 @@ export const postdata = [
   },
   {
     ID: "130",
-    post_category: "1",
+    post_category: "Arizona",
     post_author: "1",
     post_date: "2022-09-29 10:03:03",
     post_date_gmt: "2022-09-29 10:03:03",
@@ -189,7 +189,7 @@ export const postdata = [
   },
   {
     ID: "144",
-    post_category: "2",
+    post_category: "California",
     post_author: "1",
     post_date: "2022-10-27 06:35:49",
     post_date_gmt: "2022-10-27 06:35:49",
@@ -216,7 +216,7 @@ export const postdata = [
   },
   {
     ID: "145",
-    post_category: "2",
+    post_category: "California",
     post_author: "1",
     post_date: "2022-10-27 06:46:56",
     post_date_gmt: "2022-10-27 06:46:56",
@@ -243,7 +243,7 @@ export const postdata = [
   },
   {
     ID: "296",
-    post_category: "2",
+    post_category: "California",
     post_author: "1",
     post_date: "2022-12-12 04:34:31",
     post_date_gmt: "2022-12-12 04:34:31",
@@ -270,7 +270,7 @@ export const postdata = [
   },
   {
     ID: "297",
-    post_category: "2",
+    post_category: "California",
     post_author: "1",
     post_date: "2022-12-12 04:43:12",
     post_date_gmt: "2022-12-12 04:43:12",
@@ -297,7 +297,7 @@ export const postdata = [
   },
   {
     ID: "298",
-    post_category: "2",
+    post_category: "California",
     post_author: "1",
     post_date: "2022-12-12 04:54:40",
     post_date_gmt: "2022-12-12 04:54:40",
@@ -324,7 +324,7 @@ export const postdata = [
   },
   {
     ID: "301",
-    post_category: "2",
+    post_category: "California",
     post_author: "1",
     post_date: "2022-12-12 05:10:15",
     post_date_gmt: "2022-12-12 05:10:15",
@@ -351,7 +351,7 @@ export const postdata = [
   },
   {
     ID: "302",
-    post_category: "2",
+    post_category: "California",
     post_author: "1",
     post_date: "2022-12-12 05:19:30",
     post_date_gmt: "2022-12-12 05:19:30",
@@ -431,7 +431,7 @@ export const postdata = [
   },
   {
     ID: "569",
-    post_category: "2",
+    post_category: "California",
     post_author: "1",
     post_date: "2023-02-14 08:22:12",
     post_date_gmt: "2023-02-14 08:22:12",
@@ -484,7 +484,7 @@ export const postdata = [
   },
   {
     ID: "581",
-    post_category: "3",
+    post_category: "Colorado",
     post_author: "1",
     post_date: "2023-02-20 04:49:11",
     post_date_gmt: "2023-02-20 04:49:11",
@@ -511,7 +511,7 @@ export const postdata = [
   },
   {
     ID: "584",
-    post_category: "3",
+    post_category: "Colorado",
     post_author: "1",
     post_date: "2023-02-20 06:06:41",
     post_date_gmt: "2023-02-20 06:06:41",
@@ -538,7 +538,7 @@ export const postdata = [
   },
   {
     ID: "587",
-    post_category: "3",
+    post_category: "Colorado",
     post_author: "1",
     post_date: "2023-02-20 08:08:23",
     post_date_gmt: "2023-02-20 08:08:23",
@@ -565,7 +565,7 @@ export const postdata = [
   },
   {
     ID: "591",
-    post_category: "3",
+    post_category: "Colorado",
     post_author: "1",
     post_date: "2023-02-22 04:27:48",
     post_date_gmt: "2023-02-22 04:27:48",
@@ -592,7 +592,7 @@ export const postdata = [
   },
   {
     ID: "640",
-    post_category: "3",
+    post_category: "Colorado",
     post_author: "1",
     post_date: "2024-04-18 11:35:29",
     post_date_gmt: "2024-04-18 11:35:29",
@@ -620,7 +620,7 @@ export const postdata = [
   },
   {
     ID: "643",
-    post_category: "3",
+    post_category: "Colorado",
     post_author: "1",
     post_date: "2024-04-19 10:35:25",
     post_date_gmt: "2024-04-19 10:35:25",
@@ -648,7 +648,7 @@ export const postdata = [
   },
   {
     ID: "647",
-    post_category: "3",
+    post_category: "Colorado",
     post_author: "1",
     post_date: "2024-04-22 11:24:19",
     post_date_gmt: "2024-04-22 11:24:19",
@@ -676,7 +676,7 @@ export const postdata = [
   },
   {
     ID: "650",
-    post_category: "3",
+    post_category: "Colorado",
     post_author: "1",
     post_date: "2024-04-23 10:18:06",
     post_date_gmt: "2024-04-23 10:18:06",
@@ -704,6 +704,7 @@ export const postdata = [
   },
   {
     ID: "656",
+    post_category: "Texas",
     post_author: "1",
     post_date: "2024-04-25 10:34:22",
     post_date_gmt: "2024-04-25 10:34:22",

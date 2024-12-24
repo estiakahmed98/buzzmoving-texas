@@ -12,20 +12,19 @@ const HeroSection: React.FC = () => {
         muted
         playsInline
       ></video>
-
-      <div className="absolute inset-0 flex flex-col md:flex-row ">
-        <div className="relative md:w-1/2 text-center md:text-left left-[10%] top-[45%]">
-          <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
+      <div className="relative z-10 flex flex-col lg:flex-row justify-between items-center lg:px-12 py-8 lg:py-16">
+        {/* Left Content */}
+        <div className="mt-24">
+          <h1 className="text-5xl xl:text-6xl font-bold leading-tight mb-4">
             Moving Quote Taxes
           </h1>
-          <p className="text-3xl md:text-4xl font-semibold leading-tight mb-6">
+          <p className="text-2xl xl:text-3xl font-semibold leading-tight mb-6">
             Trusted Moving Company
           </p>
-
-          <div className="flex gap-6 items-center mt-8">
+          <div className="flex gap-6 justify-center lg:justify-start items-center mt-8">
             <div>
               <h2 className="text-2xl font-bold">126+</h2>
-              <p className="text-gray-300 text-sm">moves today</p>
+              <p className="text-gray-300 text-sm">Moves today</p>
             </div>
             <div>
               <h2 className="text-2xl font-bold">98%</h2>
@@ -33,9 +32,10 @@ const HeroSection: React.FC = () => {
             </div>
           </div>
         </div>
-        {/* <div className="relative md:text-left left-[10%] top-[15%] ">
+
+        <div className="bg-transparent shadow-lg">
           <MovingCalculator />
-        </div> */}
+        </div>
       </div>
     </section>
   );
